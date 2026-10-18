@@ -6,6 +6,113 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, r2_score
 
+# ---------------- PAGE CONFIG ----------------
+st.set_page_config(
+    page_title="AutoBloom | Car Price Predictor",
+    page_icon="🚘",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+
+# ---------------- CUSTOM DESIGN ----------------
+st.markdown("""
+<style>
+    .stApp {
+        background: linear-gradient(
+            135deg,
+            #F7F3FF 0%,
+            #EDF7FF 55%,
+            #FFF2E8 100%
+        );
+        color: #26345C;
+    }
+
+    h1, h2, h3 {
+        color: #344477 !important;
+    }
+
+    p, label, span {
+        color: #344477;
+    }
+
+    .hero {
+        background: linear-gradient(
+            110deg,
+            #DCD6FF,
+            #D8EEFF,
+            #FFE4D6
+        );
+        padding: 35px;
+        border-radius: 25px;
+        text-align: center;
+        border: 1px solid #FFFFFF;
+        margin-bottom: 25px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        color: #344477;
+        margin-bottom: 8px;
+    }
+
+    .hero p {
+        font-size: 17px;
+        color: #4C5980;
+    }
+
+    .section-card {
+        background: rgba(255,255,255,0.85);
+        padding: 25px;
+        border-radius: 20px;
+        border: 1px solid #DDE4FA;
+        margin-bottom: 18px;
+    }
+
+    div.stButton > button {
+        background: linear-gradient(
+            90deg,
+            #8274D9,
+            #65A9E8
+        );
+        color: white;
+        border: none;
+        border-radius: 12px;
+        padding: 12px;
+        font-size: 17px;
+        font-weight: bold;
+        width: 100%;
+    }
+
+    div.stButton > button:hover {
+        color: white;
+        border: 1px solid #FFFFFF;
+        background: linear-gradient(
+            90deg,
+            #6E60C8,
+            #4A95D8
+        );
+    }
+
+    div[data-testid="stMetric"] {
+        background: #FFFFFF;
+        padding: 20px;
+        border-radius: 18px;
+        border: 1px solid #DFE5FA;
+    }
+
+    div[data-baseweb="select"] > div,
+    div[data-baseweb="input"] > div {
+        border-radius: 10px;
+        background-color: #FFFFFF;
+    }
+
+    footer {
+        visibility: hidden;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+
 # ---------------- HEADER ----------------
 st.markdown("""
 <div class="hero">
